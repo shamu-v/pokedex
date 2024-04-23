@@ -63,12 +63,13 @@ export async function getStaticProps({ params }) {
         data.pokemon.map(async (pokemon) => {
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.pokemon.name}`);
             const pokemonData = await response.json();
-            const pokemonImage = pokemonData.sprites.front_default != null ? pokemonData.sprites.front_default : pokemonData.sprites.front_female
+
+            //const pokemonImage = pokemonData.sprites.front_default != null ? pokemonData.sprites.front_default : pokemonData.sprites.front_female
 
             return {
                 id: pokemonData.id,
                 name: pokemonData.name,
-                image: pokemonImage,
+                images: pokemonData.sprites.other["official-artwork"].front_default,
                 type: pokemonData.types[0].type.name,
             };
         })

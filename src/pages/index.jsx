@@ -17,7 +17,7 @@ export default function Home({ types }) {
   };
 
   return (
-    <main className={`flex min-h-screen flex-col items-center justify-between p-16 ${inter.className}`}>
+    <main className={`flex min-h-screen flex-col items-center justify-between p-32 ${inter.className}`}>
       <Heading />
       <Divider className="my-4" />
       <Select

@@ -15,7 +15,7 @@ export default function Pokemon({ data }) {
             <Heading />
             <Divider className="my-4" />
             <h2 className="mb-4 text-3xl font-bold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-5xl">Pokemon: {data.name}</h2>
-            <PokeImage sprites={data.sprites} opt={1} />
+            <PokeImage images={data.sprites.other["official-artwork"].front_default} />
             <PokemonData data={data} />
             <Divider className="my-4" />
             <HomeButton />

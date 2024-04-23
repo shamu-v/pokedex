@@ -18,9 +18,7 @@ export default function ListPokemons({ pokemons }) {
                     </CardHeader>
                     <CardBody className="overflow-visible items-center p-0">
                         {
-                            <PokeImage sprites={pokemon.images} opt={0} /> ?
-                            <PokeImage sprites={pokemon.images} opt={0} /> :
-                            null
+                            <PokeImage images={pokemon.images} />
                         }
                     </CardBody>
                 </Card>
